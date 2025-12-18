@@ -44,44 +44,44 @@ const Index = () => {
   const [posts, setPosts] = useState<Post[]>([
     {
       id: 1,
-      title: 'Добро пожаловать в наше сообщество!',
-      content: 'Рады видеть вас здесь. Делитесь идеями, общайтесь и развивайтесь вместе с нами.',
-      author: 'Мария Иванова',
+      title: 'Существует ли внеземная жизнь?',
+      content: 'На сегодняшний день у нас нет научных доказательств существования жизни за пределами Земли. Однако современная наука склоняется к тому, что мы, скорее всего, не одиноки во Вселенной.',
+      author: 'Научная редакция',
       avatar: '',
-      category: 'Объявления',
-      likes: 45,
-      comments: 12,
-      views: 234,
-      time: '2 часа назад',
+      category: 'Наука',
+      likes: 245,
+      comments: 67,
+      views: 1834,
+      time: '1 час назад',
       isPinned: true
     },
     {
       id: 2,
-      title: 'Как начать свой проект: советы для новичков',
-      content: 'Собрал список полезных ресурсов и инструментов для тех, кто только начинает.',
-      author: 'Дмитрий Петров',
+      title: 'Парадокс Ферми: где все?',
+      content: 'Если Вселенная так огромна и полна звёзд, почему мы до сих пор не обнаружили признаков разумной жизни? Этот вопрос остаётся одной из величайших загадок космологии.',
+      author: 'Астрофизик',
       avatar: '',
-      category: 'Обучение',
-      likes: 67,
-      comments: 23,
-      views: 456,
-      time: '5 часов назад'
+      category: 'Космология',
+      likes: 189,
+      comments: 43,
+      views: 1256,
+      time: '3 часа назад'
     },
     {
       id: 3,
-      title: 'Обсуждение новых трендов в дизайне 2024',
-      content: 'Что вы думаете о минимализме и ярких акцентах? Давайте обсудим!',
-      author: 'Анна Смирнова',
+      title: 'Уравнение Дрейка и вероятность контакта',
+      content: 'Математический подход к оценке количества цивилизаций в нашей галактике показывает интересные результаты. Обсудим параметры и их влияние на итоговые расчёты.',
+      author: 'Исследователь SETI',
       avatar: '',
-      category: 'Дизайн',
-      likes: 89,
-      comments: 34,
-      views: 567,
-      time: '1 день назад'
+      category: 'Исследования',
+      likes: 156,
+      comments: 38,
+      views: 892,
+      time: '5 часов назад'
     }
   ]);
 
-  const categories = ['Все', 'Объявления', 'Обучение', 'Дизайн', 'Разработка', 'Общее'];
+  const categories = ['Все', 'Наука', 'Космология', 'Исследования', 'Теории', 'Открытия'];
 
   const handleLike = (postId: number) => {
     setPosts(posts.map(post => 
@@ -102,10 +102,10 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
-                <Icon name="MessageCircle" className="text-white" size={24} />
+                <Icon name="Rocket" className="text-white" size={24} />
               </div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                ForumHub
+                Космический Форум
               </h1>
             </div>
             
@@ -280,7 +280,7 @@ const Index = () => {
                   Популярные темы
                 </h3>
                 <div className="space-y-3">
-                  {['Веб-разработка', 'UI/UX дизайн', 'Мобильные приложения', 'Искусственный интеллект'].map(topic => (
+                  {['Экзопланеты', 'Марсианские миссии', 'Поиск сигналов SETI', 'Микробная жизнь'].map(topic => (
                     <div
                       key={topic}
                       className="p-3 rounded-lg hover:bg-primary/10 transition-all cursor-pointer gradient-card border border-primary/20"
@@ -300,7 +300,7 @@ const Index = () => {
                   Активные участники
                 </h3>
                 <div className="space-y-3">
-                  {['Елена К.', 'Игорь М.', 'Ольга Р.', 'Сергей В.'].map(name => (
+                  {['Карл Саган', 'Нил Тайсон', 'Джилл Тартер', 'Фрэнк Дрейк'].map(name => (
                     <div key={name} className="flex items-center gap-3 cursor-pointer hover:scale-105 transition-transform">
                       <Avatar className="border-2 border-secondary">
                         <AvatarFallback className="bg-gradient-to-br from-secondary to-accent text-white">
@@ -457,7 +457,7 @@ const Index = () => {
                 <div className="text-center p-4 rounded-lg gradient-card">
                   <Icon name="Mail" size={24} className="mx-auto mb-2 text-primary" />
                   <p className="font-semibold">Email</p>
-                  <p className="text-sm text-muted-foreground">support@forum.com</p>
+                  <p className="text-sm text-muted-foreground">contact@spaceforum.com</p>
                 </div>
                 <div className="text-center p-4 rounded-lg gradient-card">
                   <Icon name="Phone" size={24} className="mx-auto mb-2 text-secondary" />
@@ -478,7 +478,7 @@ const Index = () => {
       <footer className="glass-effect border-t mt-12">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-muted-foreground">© 2024 ForumHub. Все права защищены.</p>
+            <p className="text-muted-foreground">© 2024 Космический Форум. Исследуем Вселенную вместе.</p>
             <div className="flex gap-4">
               {['Twitter', 'Facebook', 'Instagram', 'Github'].map(social => (
                 <Button key={social} variant="ghost" size="sm" className="hover:text-primary hover:scale-110 transition-all">
